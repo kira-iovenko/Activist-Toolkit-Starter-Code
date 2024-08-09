@@ -1,28 +1,102 @@
 /* STYLE SECTIONING TAGS */
-* { /* Reset the space of the webpage */
-   margin: 0px;
-   padding: 0px;
+* {
+  /* Reset the space of the webpage */
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
- background-color:#F9DBBA; 
+  background-color: #f9dbba;
+  text-align: center;
+  font-family: Sans-serif;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 /* STYLE TEXT */
 
-h1 {
-  color: #1F316F;
+h1,
+h2 {
+  color: #1f316f;
+  margin: 20px 0;
+}
+p{
+   margin: 10px 0;
 }
 
 /* STYLE IMAGES */
- .images{
-   max-width: 100px;
-   max-height: 100px;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
 }
+
+.flex-item {
+  text-align: center;
+  flex-basis: 100%;
+  /* max-width: 200px; */
+}
+img {
+  /* width: 200px;
+   height: 200px; */
+  width: 100%;
+  border: 2px solid #1a4870;
+  border-radius: 10%;
+}
+ol {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ol.custom-ol li {
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol.custom-ol li:before {
+  content: counter(item);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #5b99c2;
+  color: #f9dbba;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
 /* STYLE NAV BAR */
+nav {
+  background-color: #5b99c2;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    li {
+      padding: 10px;
+      a,
+      a:visited {
+        text-decoration: none;
+        color: #f9dbba;
+      }
+    }
+    li:hover {
+      background-color: #1a4870;
+    }
+  }
+}
 
 /* STYLE BUTTONS */
 
 /* ADD MORE! */
-#mainPoints{
+/* Change css based on screen size*/
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
 }
