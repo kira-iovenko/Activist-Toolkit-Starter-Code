@@ -14,9 +14,27 @@ function displayMessage() {
 }
 
 /*Generate a quote from an array*/
+
+/*quote array*/
 var quoteList = [
   "The strongest people are not those who show strength in front of the world but those who fight and win battles that others do not know anything about. ― Jonathan Harnisch",
   "The first step toward change is awareness. The second step is acceptance. — Nathaniel Branden",
   "Awareness is like the sun. When it shines on things, they are transformed. — Thich Nhat Hanh",
   "What mental health needs is more sunlight, more candor, and more unashamed conversation. — Glenn Close",
 ];
+
+/*variables for quote, button, and count*/
+var quote = document.getElementById("quote");
+var quoteButton = document.getElementById("quoteButton");
+var count = 0;
+
+/*functions for the button*/
+quoteButton.addEventListener("click", displayQuote);
+
+function displayQuote(){
+  quote.innerHTML = quoteList[count];
+  count++;
+  if (count == quoteList.length){
+    count=0;
+  }
+}
